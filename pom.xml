@@ -4,7 +4,7 @@
 
     <groupId>me.escoffier.loom</groupId>
     <artifactId>loom-unit</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0-SNAPSHOT</version>
 
     <name>Loom-Unit</name>
     <description>A Junit 5 Extension to check if your code pins the carrier thread</description>
@@ -162,7 +162,7 @@
         <url>https://github.com/cescoffier/loom-unit</url>
         <connection>https://github.com/cescoffier/loom-unit.git</connection>
         <developerConnection>scm:git:https://github.com/cescoffier/loom-unit.git</developerConnection>
-      <tag>loom-unit-0.1.0</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <inceptionYear>2022</inceptionYear>
