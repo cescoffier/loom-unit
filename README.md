@@ -3,6 +3,8 @@
 A Junit 5 extension capturing weather a virtual threads _pins_ the carrier thread during the execution of the test.
 
 
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/cescoffier/loom-unit/Build) | ![Maven Central](https://img.shields.io/maven-central/v/me.escoffier.loom/loom-unit?style=for-the-badge)
+
 ## Usage
 
 1. Add the following dependency to your project:
