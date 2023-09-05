@@ -29,7 +29,7 @@ public class LoomUnitExampleTest {
     }
 
     @Test
-    public void testThatShouldNotPin(ThreadPinnedEvents events) { // Inject an object to check the pin events
+    public void testThatShouldPin(ThreadPinnedEvents events) { // Inject an object to check the pin events
         Assertions.assertTrue(events.getEvents().isEmpty());
         codeUnderTest.pin();
         await().until(() -> events.getEvents().size() > 0);
