@@ -74,3 +74,26 @@ public class LoomUnitExampleTest {
 }
 ```
 
+You can also use the `@ShouldPin` and `@ShouldNotPin` annotation on the class:
+
+```java
+@ExtendWith(LoomUnitExtension.class) // Use the extension
+@ShouldNotPin // You can use @ShouldNotPin or @ShouldPin on the class itself, it's applied to each method.
+public class LoomUnitExampleOnClassTest {
+
+	CodeUnderTest codeUnderTest = new CodeUnderTest();
+
+	@Test
+	public void testThatShouldNotPin() {
+		// ...
+	}
+
+	@Test
+	@ShouldPin(atMost = 1) // Method annotation overrides the class annotation
+	public void testThatShouldPinAtMostOnce() {
+		codeUnderTest.pin();
+	}
+
+}
+```
+
