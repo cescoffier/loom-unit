@@ -74,7 +74,7 @@ public class LoomUnitExampleTest {
 }
 ```
 
-You can also use the `@ShouldPin` and `@ShouldNotPin` annotation on the class:
+You can also use the `@ShouldPin` and `@ShouldNotPin` annotations on the class:
 
 ```java
 @ExtendWith(LoomUnitExtension.class) // Use the extension
