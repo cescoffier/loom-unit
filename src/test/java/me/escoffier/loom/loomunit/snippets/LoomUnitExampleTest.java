@@ -23,6 +23,12 @@ public class LoomUnitExampleTest {
     }
 
     @Test
+    @ShouldNotPin(atMost = 1)
+    public void testThatShouldNotPinButOneTime() {
+        codeUnderTest.pin(1);
+    }
+
+    @Test
     @ShouldPin(atMost = 1)
     public void testThatShouldPinAtMostOnce() {
         codeUnderTest.pin();

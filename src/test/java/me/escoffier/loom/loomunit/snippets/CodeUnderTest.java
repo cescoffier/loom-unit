@@ -5,9 +5,15 @@ import java.util.concurrent.CountDownLatch;
 public class CodeUnderTest {
 
     void pin() {
-        CountDownLatch latch = new CountDownLatch(1);
-        CodeUnderTest pinning = new CodeUnderTest();
-        Thread.ofVirtual().start(() -> pinning.callSynchronizedMethod(latch));
+        pin(1);
+    }
+
+    void pin(int count) {
+        CountDownLatch latch = new CountDownLatch(count);
+        for (int i = 0; i < count; i++) {
+            CodeUnderTest pinning = new CodeUnderTest();
+            Thread.ofVirtual().start(() -> pinning.callSynchronizedMethod(latch));
+        }
         try {
             latch.await();
         } catch (InterruptedException e) {
